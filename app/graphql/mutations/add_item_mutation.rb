@@ -24,8 +24,11 @@ module Mutations
       )
 
       if item.save
+        puts 'whaaaaaat save'
         { item: item }
       else
+        puts 'whaaaaaat'
+        Rails.logger.info(items.errors.full_messages)
         { errors: item.errors.full_messages }
       end
     end

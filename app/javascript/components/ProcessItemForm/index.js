@@ -10,6 +10,7 @@ const ProcessItemForm = ({
   onProcessItem,
   buttonText,
   loading,
+  errors,
 }) => {
   const [title, setTitle] = useState(initialTitle);
   const [description, setDescription] = useState(initialDescription);

@@ -6,9 +6,5 @@ query LibraryQuery {
     title
     imageUrl
     description
-    user {
-      id
-      email
-    }
   }
 }
