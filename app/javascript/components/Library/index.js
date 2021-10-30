@@ -4,6 +4,7 @@ import { Query } from 'react-apollo';
 import { LibraryQuery } from './operations.graphql';
 import cs from './styles';
 import UpdateItemForm from '../UpdateItemForm';
+import Subscription from '../Subscription';
 
 const Library = () => {
   const [item, setItem] = useState(null);
@@ -36,6 +37,12 @@ const Library = () => {
               initialImageUrl={item.imageUrl}
               onClose={() => setItem(null)}
             />
+          )}
+
+          {({ data, loading, subscribeToMore }) => (
+            <div>
+              <Subscription subscribeToMore={subscribeToMore} />
+            </div>
           )}
         </div>
       )}

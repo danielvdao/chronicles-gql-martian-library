@@ -25,6 +25,7 @@ module Mutations
 
       if item.save
         puts 'whaaaaaat save'
+        MartianLibrarySchema.subscriptions.trigger("itemAdded", {}, item)
         { item: item }
       else
         puts 'whaaaaaat'

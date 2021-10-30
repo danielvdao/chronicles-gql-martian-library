@@ -1,0 +1,27 @@
+subscription ItemSubscription {
+  itemAdded {
+    item {
+      id
+      title
+      imageUrl
+      description
+    }
+    user {
+      id
+      email
+    }
+  }
+
+  itemUpdated {
+    item {
+      id
+      title
+      imageUrl
+      description
+    }
+    user {
+      id
+      email
+    }
+  }
+}
