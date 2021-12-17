@@ -29,6 +29,7 @@ module MartianLibrary
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
 
+    config.force_ssl = false
     config.action_cable.allowed_request_origins = [%r{http://*}, %r{https://*}]
     config.action_cable.allow_same_origin_as_host = true
 
